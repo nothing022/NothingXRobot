@@ -133,7 +133,7 @@ def chatbot(update: Update, context: CallbackContext):
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://fallenxbot.vercel.app/api/apikey={key}/fallen/Anonymous/message=hehe"
+        url = f"https://Nothing_Robot.vercel.app/api/apikey={key}/fallen/Anonymous/message=hehe"
         request = requests.get(url)
         results = json.loads(request.text)
         sleep(0.5)
