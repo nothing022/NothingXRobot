@@ -133,11 +133,11 @@ def chatbot(update: Update, context: CallbackContext):
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/Anonymous/message={message.text}"
+        url = f"https://api.safone.me/chatbot?query={message.text}&user_id={chat_id}&bot_name=Nothing_Robot&bot_master=Nothing"
         request = requests.get(url)
         results = json.loads(request.text)
         sleep(0.5)
-        message.reply_text(results["reply"])
+        message.reply_text(results["response"])
 
 
 __help__ = f"""
