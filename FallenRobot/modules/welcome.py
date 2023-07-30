@@ -6,7 +6,7 @@ from pyrogram.types import *
 from pyrogram.enums import *
 
 #NAME => YOUR BOTS FILE NAME
-from NAME import pbot
+from FallenRobot import pbot
 
 #ADD ANY BUTTON YOU WANT BELOW YOUR WELCOME IMAGE
 markup=InlineKeyboardMarkup ([[InlineKeyboardButton ("MODS", url="https://t.me/NovaXMod")]])
