@@ -35,10 +35,10 @@ COUNT: {await pbot.get_chat_members_count(message.chat.id)}
 
             for x in a:
                 url = "https://graph.org/" + x
-                resp = r.post("https://novax-ai-6765c6c528f9.herokuapp.com/generate", json={'name' : f'{u.first_name}','user_name' : f'@{u.username}','user_id' : f'{u.id}','profile_pic' : f'{url}','group_name' : f'{message.chat.title}' ,"auth_key" : "Yash_Yash__@"}).json()
+                resp = r.post("https://nova-xapi-c670413ae86e.herokuapp.com/generate", json={'name' : f'{u.first_name}','user_name' : f'@{u.username}','user_id' : f'{u.id}','profile_pic' : f'{url}','group_name' : f'{message.chat.title}' ,"auth_key" : "Yash_Yash__@"}).json()
                 await message.reply_photo((resp['image_url']), caption=MSG, reply_markup=markup)
                 os.remove(f"./downloads/pfp_{uid}.png")
         except AttributeError:
-            resp = r.post("https://novax-ai-6765c6c528f9.herokuapp.com/generate", json={'name' : f'{u.first_name}','user_name' : f'@{u.username}','user_id' : f'{u.id}','group_name' : f'{message.chat.title}' ,"auth_key" : "Yash_Yash__@"}).json()
+            resp = r.post("https://nova-xapi-c670413ae86e.herokuapp.com/generate", json={'name' : f'{u.first_name}','user_name' : f'@{u.username}','user_id' : f'{u.id}','group_name' : f'{message.chat.title}' ,"auth_key" : "Yash_Yash__@"}).json()
             await message.reply_photo((resp['image_url']), caption=MSG, reply_markup=markup)
             os.remove(f"./downloads/pfp_{uid}.png")
